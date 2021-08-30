@@ -28,7 +28,7 @@ public class BankingMain {
     public static void main(String[] arg) {
 
 
-        String functions = "Enter\n1 : to login as Employee\n";
+        String functions = "Enter\n1 : login as Employee\n";
         functions = functions + "2 : login as customer\n";
         functions = functions + "3 : create new Employee\n";
         functions = functions + "4 : create a new customer";
