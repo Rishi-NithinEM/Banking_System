@@ -5,8 +5,8 @@ public class Account {
     private int customerID;
     private int accountNo;
     private int balance;
-    private int openedEmpId;
     private int pin;
+    private DebitCard debitCard;
     private Account.AccountType accType;
 
     public Account() {
@@ -36,14 +36,6 @@ public class Account {
         this.accType = Account.AccountType.values()[index];
     }
 
-    public int getOpenedEmpId() {
-        return this.openedEmpId;
-    }
-
-    public void setOpenedEmpId(int openedEmpId) {
-        this.openedEmpId = openedEmpId;
-    }
-
     public int getPin() {
         return this.pin;
     }
@@ -58,6 +50,14 @@ public class Account {
 
     public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    public void setDebitCard(DebitCard db) {
+        this.debitCard = db;
+    }
+
+    public DebitCard getDebitCard() {
+        return this.debitCard;
     }
 
     private static enum AccountType {

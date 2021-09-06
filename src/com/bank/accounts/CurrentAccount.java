@@ -1,9 +1,18 @@
 package com.bank.accounts;
 
-public class CurrentAccount extends Account{
+public class CurrentAccount extends Account {
 
     private int creditLimit;
     private int withdrawLimit;
+    private double interestRate;
+
+    public double getInterestRate() {
+        return this.interestRate;
+    }
+
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
+    }
 
     public int getCreditLimit() {
         return this.creditLimit;
@@ -24,6 +33,7 @@ public class CurrentAccount extends Account{
     public CurrentAccount() {
         this.setBalance(0);
         this.setCreditLimit(50000);
+        this.setInterestRate(0.45D);
         this.setWithdrawLimit(100000);
     }
 

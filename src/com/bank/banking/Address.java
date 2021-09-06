@@ -6,7 +6,7 @@ public class Address {
     private int buildingNo;
     private String area;
     private String city;
-    private String state;
+    private Address.State state;
     private long pincode;
 
     public int getBuildingNo() {
@@ -33,12 +33,12 @@ public class Address {
         this.city = city;
     }
 
-    public String getState() {
+    public Address.State getState() {
         return this.state;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setState(int index) {
+        this.state = State.values()[index-1];
     }
 
     public long getPincode() {
@@ -60,4 +60,12 @@ public class Address {
     public Address() {
     }
 
+    private static enum State {
+        STATE_1,
+        STATE_2,
+        STATE_3;
+
+        private State() {
+        }
+    }
 }

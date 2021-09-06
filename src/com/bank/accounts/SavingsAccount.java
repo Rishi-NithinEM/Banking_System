@@ -14,7 +14,7 @@ public class SavingsAccount extends Account {
 
     public SavingsAccount() {
         this.setBalance(0);
-        this.setWithdrawLimit(25000);
+        this.setWithdrawLimit(100000);
     }
 
 }

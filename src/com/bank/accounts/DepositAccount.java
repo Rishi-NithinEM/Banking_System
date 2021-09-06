@@ -6,7 +6,7 @@ import java.util.Date;
 public class DepositAccount extends Account {
 
     private double interestRate;
-    private String depositDate;
+    private Date depositDate;
     private int termsInMonth;
 
     public double getInterestRate() {
@@ -17,11 +17,11 @@ public class DepositAccount extends Account {
         this.interestRate = interestRate;
     }
 
-    public String getDepositDate() {
+    public Date getDepositDate() {
         return this.depositDate;
     }
 
-    public void setDepositDate(String depositDate) {
+    public void setDepositDate(Date depositDate) {
         this.depositDate = depositDate;
     }
 
@@ -36,8 +36,7 @@ public class DepositAccount extends Account {
     public DepositAccount() {
         this.setBalance(0);
         this.setInterestRate(0.45D);
-        SimpleDateFormat sm = new SimpleDateFormat("yyyy-MM-dd");
-        this.setDepositDate(sm.format(new Date()).toString());
+        this.setDepositDate(new Date());
     }
 
 }

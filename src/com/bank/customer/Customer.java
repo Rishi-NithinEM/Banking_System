@@ -1,8 +1,11 @@
 package com.bank.customer;
 
+import com.bank.Card.Card;
 import com.bank.accounts.Account;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Customer {
 
@@ -14,6 +17,7 @@ public class Customer {
     private long phoneNum;
     private String dob;
     private HashMap<Integer, Account> customerAccounts= new HashMap<>();
+    private List<Card> creditCards = new ArrayList<>();
 
     public int getCustomerID() {
         return this.customerID;
@@ -77,6 +81,14 @@ public class Customer {
 
     public HashMap<Integer, Account> getAccount(){
         return customerAccounts;
+    }
+
+    public void addCreditCard(Card c){
+        this.creditCards.add(c);
+    }
+
+    public List<Card> getCreditCards(){
+        return this.creditCards;
     }
 
     public Customer() {
