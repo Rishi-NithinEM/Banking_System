@@ -353,16 +353,16 @@ public class Operations {
     public static void employeeFunctions(Employee ee) {
 
 
-        String st = ee.getEmployeeType();
+        Employee.EmployeeType st = ee.getEmployeeType();
 
         switch (st) {
-            case "Manager":
+            case Manager:
                 managerFunctions();
                 break;
-            case "Accountant":
+            case Accountant:
                 accountantFunctions();
                 break;
-            case "Cashier":
+            case Cashier:
                 cashierFunctions();
                 break;
         }
@@ -594,7 +594,7 @@ public class Operations {
         }
         ac.setAccountNo(++BankingMain.AccountId);
         cust.addAccount(ac, ac.getAccountNo());
-        if (ac.getAccType() != "Deposit") {
+        if (ac.getAccType() != Account.AccountType.Deposit) {
             System.out.println("Creating a Debit Card");
             createDebitCard(ac);
         }

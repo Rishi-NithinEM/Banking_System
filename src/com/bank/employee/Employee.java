@@ -27,8 +27,8 @@ public class Employee {
         this.empName = empName;
     }
 
-    public String getEmployeeType() {
-        return this.empType.toString();
+    public EmployeeType getEmployeeType() {
+        return this.empType;
     }
 
     public void setEmployeeType(String val) {
@@ -82,7 +82,7 @@ public class Employee {
     public Employee() {
     }
 
-    private static enum EmployeeType {
+    public static enum EmployeeType {
         Manager,
         Accountant,
         Cashier;

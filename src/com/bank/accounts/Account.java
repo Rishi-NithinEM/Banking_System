@@ -28,8 +28,8 @@ public class Account {
         this.accountNo = accountNo;
     }
 
-    public String getAccType() {
-        return this.accType.toString();
+    public AccountType getAccType() {
+        return this.accType;
     }
 
     public void setAccType(int index) {
@@ -60,7 +60,7 @@ public class Account {
         return this.debitCard;
     }
 
-    private static enum AccountType {
+    public static enum AccountType {
         Savings,
         Current,
         Deposit;
